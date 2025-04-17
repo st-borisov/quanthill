@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<div class="cursor-dot"></div>
+	<div class="cursor-dot-outline"></div>
+
+	<nav class="navbar" id="header">
+		<div class="container">
+			<div class="w-100 d-flex justify-content-between align-items-center">
+				<div class="navbar__left">
+					<a class="navbar-brand" href="#">
+						<img src="img/header/logo.svg" alt="лого quanthill">
+					</a>
+				</div>
+				<ul class="navbar-nav d-none d-lg-flex">
+					<li class="nav-item">
+						<a class="nav-link" href="#">О нас</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Услуги</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Стратегии</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Документы</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Контакты</a>
+					</li>
+				</ul>
+				<div class="navbar__right d-flex align-items-center">
+					<div class="navbar__links d-flex align-items-center">
+						<a href="#" class="btn-1 navbar__btn">Связаться</a>
+						<a href="#" class="navbar__lk d-none d-sm-flex">
+							<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M0 22.5033H22.1244C22.1244 18.852 20.3578 15.6141 17.6267 13.6014C15.988 15.368 13.6506 16.4801 11.0573 16.4801C8.46397 16.4801 6.13146 15.368 4.48787 13.6014C1.76661 15.6141 0 18.852 0 22.5033Z"
+									fill="#1D1D1B" />
+								<path
+									d="M11.062 14.9989C15.2038 14.9989 18.5614 11.6413 18.5614 7.49947C18.5614 3.35763 15.2038 0 11.062 0C6.92013 0 3.5625 3.35763 3.5625 7.49947C3.5625 11.6413 6.92013 14.9989 11.062 14.9989Z"
+									fill="#0047AB" />
+							</svg>
+						</a>
+					</div>
+					<div class="navbar__lang d-none d-lg-flex align-items-center">
+						<a href="#" class="active">EN</a>
+						<a href="#">RU</a>
+					</div>
+					<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+						aria-controls="offcanvasNavbar">
+						<span class="navbar-toggler-icon">
+							<svg width="38" height="30" viewBox="0 0 38 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M31.6165 24.8976H5.63251C3.62209 24.8976 1.77691 24.1677 0.344832 22.9698C0.220902 23.4379 0.124512 23.9199 0.124512 24.4156C0.124512 27.4588 2.58934 29.9236 5.63251 29.9236H31.6165C34.6597 29.9236 37.1245 27.4588 37.1245 24.4156C37.1245 23.9061 37.0281 23.4242 36.9042 22.9698C35.4721 24.1677 33.6269 24.8976 31.6165 24.8976Z"
+									fill="#1D1D1B" />
+								<path
+									d="M5.63251 20.7666H31.6165C34.6597 20.7666 37.1245 18.3017 37.1245 15.2586C37.1245 14.7491 37.0281 14.2671 36.9042 13.8127C35.4721 15.0107 33.6269 15.7405 31.6165 15.7405H5.63251C3.62209 15.7405 1.77691 15.0107 0.344832 13.8127C0.220902 14.2809 0.124512 14.7628 0.124512 15.2586C0.124512 18.3017 2.58934 20.7666 5.63251 20.7666Z"
+									fill="#1D1D1B" />
+								<path
+									d="M5.63251 11.5957H31.6165C34.6597 11.5957 37.1245 9.1309 37.1245 6.08773C37.1245 3.04456 34.6597 0.579727 31.6165 0.579727H5.63251C2.58934 0.579727 0.124512 3.04456 0.124512 6.08773C0.124512 9.1309 2.58934 11.5957 5.63251 11.5957Z"
+									fill="#0047AB" />
+							</svg>
+						</span>
+					</button>
+					<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+						aria-labelledby="offcanvasNavbarLabel">
+						<div class="offcanvas-header d-flex justify-content-sm-end justify-content-between">
+							<a href="#" class="offcanvas__logo d-sm-none">
+								<img src="img/header/logo-light.svg" alt="logo">
+							</a>
+							<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть">
+								<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M20.08 14.42L14.42 20.08L19.18 24.84C20.74 26.4 23.27 26.4 24.84 24.84C26.4 23.28 26.4 20.75 24.84 19.18L20.08 14.42Z"
+										fill="white" />
+									<path
+										d="M5.93 11.59L11.59 5.93L6.83 1.17C5.27 -0.39 2.73 -0.39 1.17 1.17C-0.39 2.73 -0.39 5.27 1.17 6.83L5.93 11.59Z"
+										fill="white" />
+									<path
+										d="M24.84 1.17C23.28 -0.39 20.75 -0.39 19.18 1.17L1.17 19.18C-0.39 20.74 -0.39 23.27 1.17 24.84C2.73 26.4 5.26 26.4 6.83 24.84L24.84 6.83C26.4 5.27 26.4 2.74 24.84 1.17Z"
+										fill="white" />
+								</svg>
+							</button>
+						</div>
+						<div class="offcanvas-body d-flex flex-column justify-content-between align-items-start main-navigation">
+							<ul class="navbar-nav">
+								<li class="nav-item">
+									<a class="nav-link" href="#">О нас</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Почему мы</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Услуги</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Стратегии</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Вопрос-ответ</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Карьера</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Документы</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Контакты</a>
+								</li>
+							</ul>
+							<div class="offcanvas__group d-flex flex-column align-items-start">
+								<a href="#" class="btn-1 navbar__btn">
+									<span>Личный кабинет</span>
+									<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M0 22.5033H22.1244C22.1244 18.852 20.3578 15.614 17.6267 13.6014C15.988 15.368 13.6506 16.4801 11.0573 16.4801C8.46397 16.4801 6.13146 15.368 4.48787 13.6014C1.76661 15.614 0 18.852 0 22.5033Z"
+											fill="white" />
+										<path
+											d="M11.0622 14.9989C15.2041 14.9989 18.5617 11.6413 18.5617 7.49947C18.5617 3.35763 15.2041 0 11.0622 0C6.92037 0 3.56274 3.35763 3.56274 7.49947C3.56274 11.6413 6.92037 14.9989 11.0622 14.9989Z"
+											fill="white" />
+									</svg>
+								</a>
+								<div class="navbar__contacts d-flex align-items-sm-center flex-column flex-sm-row align-items-start">
+									<a href="tel:88006003887" class="navbar__phone">88006003887</a>
+									<a href="mailto:mail@quanthill.ae" class="navbar__mail">mail@quanthill.ae</a>
+									<a href="#" target="_blank" rel="nofollow" class="navbar__social">
+										<img src="img/header/tg.svg" alt="телеграм">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<main class="crypto-page">
+
+		<div class="graph-anim"></div>
+
+		<!-- Модальное окно (request) -->
+		<div class="modal fade" id="modal-request" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body">
+						<p class="modal__title mb-lg-4">Request access</p>
+						<div class="modal__form">
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby="" placeholder="Full name">
+							</div>
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby=""
+									placeholder="Name of Company or Individual Represented" name="company">
+							</div>
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby=""
+									placeholder="City / Country" name="city">
+							</div>
+							<div class="mb-lg-4">
+								<input type="email" class="form-control modal__input" id="" aria-describedby="" placeholder="Email"
+									name="email">
+							</div>
+							<div class="mb-lg-4">
+								<div class="phone-input">
+									<select class="phone-input__country"></select>
+									<div class="phone-input__phone">
+										<input class="phone-input__phone-placeholder" placeholder="123" />
+										<input class="phone-input__phone-number" />
+									</div>
+								</div>
+							</div>
+							<button class="btn-1 modal__send">Send</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section class="crypto-main-screen section-first">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 d-flex flex-column align-items-sm-start align-items-center text-center text-sm-start">
+						<div
+							class="crypto-main-screen__group d-flex flex-wrap text-center justify-content-center text-sm-start justify-content-sm-start mb-4 mb-sm-0">
+							<h1 class="title-page crypto-main-screen__title mb-sm-4 mb-1">
+								Crypto Trend Strategy
+							</h1>
+							<p class="ms-sm-3">SINCE 2018</p>
+						</div>
+						<div class="crypto-main-screen__text text">
+							<p>Our trading approach is based on trend-following strategies. Trends are the fundamental state of the
+								market, without which pricing of any asset would be impossible. Trading with the trend has been one of
+								the most reliable strategies for over 150 years and will continue to be effective as long as markets
+								exist.</p>
+							<p>Our strategies are fully automated, with trading logic optimized on a large historical data set using
+								forward analysis. The core logic is based on entering and exiting positions through a cascade method
+								when an asset’s price breaks through a certain range. Both long and short trades are used.</p>
+							<p>The strategy is applied to several assets, with up to 70% exposure to Bitcoin and Ethereum and the
+								remaining 30% distributed among other highly liquid altcoins.</p>
+						</div>
+						<a href="#" class="crypto-main-screen__btn btn-1 mt-4" data-bs-toggle="modal"
+							data-bs-target="#modal-request">Request info</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!--  -->
+		<section class="crypto-description">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="crypto-description__block d-flex justify-content-lg-between flex-column flex-sm-row">
+							<div class="crypto-description__left">
+								<div
+									class="crypto-description__items d-flex flex-sm-column flex-lg-row justify-content-between justify-content-sm-start">
+									<div class="crypto-description__item">
+										<p class="crypto-description__name">Top exhanges</p>
+										<ul class="crypto-description__list d-flex flex-lg-column flex-column flex-sm-row">
+											<li>Binance</li>
+											<li>OKX</li>
+											<li>BitMEX</li>
+											<li>Deribit</li>
+										</ul>
+									</div>
+									<div class="crypto-description__item">
+										<p class="crypto-description__name">most liquid pairs</p>
+										<ul class="crypto-description__list d-flex flex-lg-column flex-column flex-sm-row">
+											<li>BTC</li>
+											<li>ETH</li>
+											<li>BNB</li>
+											<li>XRP</li>
+										</ul>
+									</div>
+									<div class="crypto-description__item">
+										<p class="crypto-description__name">Currency exposure</p>
+										<ul class="crypto-description__list d-flex flex-lg-column flex-column flex-sm-row">
+											<li>USDT</li>
+											<li>BTC</li>
+											<li>ETH</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div
+								class="crypto-description__right d-flex flex-column flex-lg-row justify-content-center align-items-center align-items-sm-start justify-content-sm-start">
+								<div class="crypto-description__group">
+									<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="49"
+										aria-valuemin="0" aria-valuemax="100">
+										<div class="progress-bar" style="width: 49%"></div>
+									</div>
+									<div class="crypto-description__info">
+										<p class="crypto-description__percent">49%</p>
+										<p class="crypto-description__text">Average net CAGR</p>
+									</div>
+								</div>
+								<div class="crypto-description__group">
+									<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="80"
+										aria-valuemin="0" aria-valuemax="100">
+										<div class="progress-bar" style="width: 80%"></div>
+									</div>
+									<div class="crypto-description__info">
+										<p class="crypto-description__percent">80%</p>
+										<p class="crypto-description__text">Profit-making years</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Ruthless calculation -->
+		<section class="calculation">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="calculation__block">
+							<div class="calculation-top d-flex align-items-center flex-column flex-lg-row">
+								<div class="calculation-top__circles">
+									<div
+										class="calculation-top-circle d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+										<p class="calculation-top-circle__title">Long-term</p>
+										<p class="calculation-top-circle__sub">strategies only</p>
+										<div class="calculation-top-circle__text text">
+											<p>We focus on fundamental trading strategies. No hype trading or chasing fleeting opportunities
+											</p>
+										</div>
+									</div>
+									<div
+										class="calculation-top-circle d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+										<p class="calculation-top-circle__title">Comprehensive</p>
+										<p class="calculation-top-circle__sub">data-based checks</p>
+										<div class="calculation-top-circle__text text">
+											<p>AL of our products have been thoroughly tested, we know all of their strengths and weaknesses,
+												and we are open about them.</p>
+										</div>
+									</div>
+								</div>
+								<div class="calculation-top__group text-center text-sm-start">
+									<h2 class="section-title calculation-top__title mb-sm-4 mb-3">Ruthless calculation</h2>
+									<div class="calculation-top__text text">
+										<p>Trends have been a fundamental aspect of financial markets for centuries, and a vast academic
+											literature has been devoted to their persistence and influence. Our trend-following strategies use
+											advanced computer algorithms to accurately identify trends, allowing them to trade hundreds of
+											different markets simultaneously, removing biases caused by human emotions.</p>
+									</div>
+								</div>
+							</div>
+							<div class="calculation-bottom">
+								<div class="calculation-bottom__group d-flex mb-4 flex-column-sm-reverse flex-lg-row flex-column">
+									<div class="calculation-bottom__box">
+										<div
+											class="calculation-bottom__items d-flex flex-wrap justify-content-sm-center justify-content-lg-start">
+											<div class="calculation-bottom__item d-flex flex-column align-items-center">
+												<p class="calculation-bottom__percent">18.42%</p>
+												<p class="calculation-bottom__sub">Year to date</p>
+											</div>
+											<div class="calculation-bottom__item d-flex flex-column align-items-center">
+												<p class="calculation-bottom__percent">22.80%</p>
+												<p class="calculation-bottom__sub">Last 3 months</p>
+											</div>
+											<div class="calculation-bottom__item d-flex flex-column align-items-center">
+												<p class="calculation-bottom__percent">13.54%</p>
+												<p class="calculation-bottom__sub">1 year</p>
+											</div>
+											<div class="calculation-bottom__item d-flex flex-column align-items-center">
+												<p class="calculation-bottom__percent">463.23%</p>
+												<p class="calculation-bottom__sub">5 years</p>
+											</div>
+											<div class="calculation-bottom__item d-flex flex-column align-items-center">
+												<p class="calculation-bottom__percent">1025.39%</p>
+												<p class="calculation-bottom__sub">Since Inception</p>
+											</div>
+										</div>
+									</div>
+									<p class="calculation-bottom__title text-center text-sm-start">Proven reliability</p>
+								</div>
+								<div class="calculation-bottom__text text text-center text-sm-start">
+									<p>Our systematic trend-following approach has proven itself for almost a decade, demonstrating its
+										adaptability and reliability in a variety of market conditions. The strength of our strategy is due
+										to its ability to profit from both uptrends and downtrends.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- How to start invest with us -->
+		<section class="how-to-start">
+			<div class="container">
+				<div class="row mb-5">
+					<div class="col-12">
+						<h2 class="how-to-start__title section-title">How to start invest with us</h2>
+					</div>
+				</div>
+				<div class="row mb-5">
+					<div class="col-12">
+						<div class="how-to-start__content">
+							<div class="how-to-start__line"></div>
+							<div class="how-to-start__items d-flex flex-column flex-lg-row">
+								<div class="how-to-start__item d-flex flex-lg-column">
+									<div class="how-to-start__number mb-lg-4"><span>1</span></div>
+									<div class="how-to-start__text text">
+										<p>
+											Fill in the required
+											contact information
+										</p>
+									</div>
+								</div>
+								<div class="how-to-start__item d-flex flex-lg-column">
+									<div class="how-to-start__number mb-lg-4"><span>2</span></div>
+									<div class="how-to-start__text text">
+										<p>A member of Quant Hill
+											team will be in touch</p>
+									</div>
+								</div>
+								<div class="how-to-start__item d-flex flex-lg-column">
+									<div class="how-to-start__number mb-lg-4"><span>3</span></div>
+									<div class="how-to-start__text text">
+										<p>Complete the Qualified
+											Investors Form</p>
+									</div>
+								</div>
+								<div class="how-to-start__item d-flex flex-lg-column">
+									<div class="how-to-start__number mb-lg-4"><span>4</span></div>
+									<div class="how-to-start__text text">
+										<p>We will provide you with
+											the relevant materials</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<button class="btn-2 how-to-start__btn" data-bs-toggle="modal" data-bs-target="#modal-request">Request
+							info</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Products / strategies -->
+		<section class="products section">
+			<div class="container">
+				<div class="row products__header">
+					<div class="col-12">
+						<h2 class="section-title text-center text-sm-start">Other strategies:</h2>
+					</div>
+				</div>
+				<div class="row g-lg-5 g-4">
+					<div class="col-sm-6">
+						<div
+							class="products__item item d-flex flex-column justify-content-between text-center text-sm-start align-items-sm-start align-items-center">
+							<div class="products__group d-flex flex-column align-items-center align-items-sm-start">
+								<div class="item-title">
+									<p class="products__name name">MoEx Trend Strategy</p>
+								</div>
+								<div class="products__text text item-text mt-lg-2 mt-sm-3 mt-2">
+									<p>Active strategy for the futures market, implemented on MoEx</p>
+								</div>
+							</div>
+							<a href="#" class="products__btn item-btn btn-1 mt-3" data-bs-toggle="modal"
+								data-bs-target="#modal-request">Request info</a>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div
+							class="products__item item d-flex flex-column justify-content-between text-center text-sm-start align-items-sm-start align-items-center">
+							<div class="products__group d-flex flex-column align-items-center align-items-sm-start">
+								<div class="item-title">
+									<p class="products__name name">CME Trend Strategy</p>
+								</div>
+								<div class="products__text text item-text mt-lg-2 mt-sm-3 mt-2">
+									<p>Active strategy for the futures market, implemented on CME</p>
+								</div>
+							</div>
+							<a href="#" class="products__btn item-btn btn-1 mt-3" data-bs-toggle="modal"
+								data-bs-target="#modal-request">Request info</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 d-flex justify-content-between align-items-center flex-column flex-sm-row flex-wrap">
+						<div class="footer-top__left">
+							<a href="#" class="footer-top__logo">
+								<img src="img/footer/logo.svg" alt="logo quanthill">
+							</a>
+						</div>
+						<ul class="nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#">О нас</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Почему мы</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Документы</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Карьера</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Вопрос-ответ</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Стратегии</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Правовая информация</a>
+							</li>
+						</ul>
+						<div class="footer-top__right d-flex align-items-center">
+							<div class="footer-top__group d-flex align-items-start">
+								<a href="tel:88006003887" class="footer-top__phone">8 (800) 600-38-87</a>
+								<a href="mailto:mail@quanthill.ae" class="footer-top__mail">mail@quanthill.ae</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row footer-bottom">
+					<div class="col-12 d-flex justify-content-between align-items-center flex-column flex-lg-row">
+						<p class="footer-bottom__copyright">© 2014 - 2025 Quanthill - FZE. Все права защищены</p>
+						<div class="footer-bottom__links d-flex align-items-center flex-column flex-lg-row">
+							<a target="_blank" href="#">Положение об обработке персональных данных</a>
+							<a target="_blank" href="#">Пользовательское соглашение</a>
+							<a target="_blank" href="#">Согласие на обработку данных метрическими программами</a>
+						</div>
+						<div class="footer-bottom__right d-flex align-items-center">
+							<p class="footer-bottom__legal d-lg-none">Telegram</p>
+							<a href="https://t.me/quanthillpublic" target="_blank" rel="nofollow" class="footer-bottom__social">
+								<img src="img/header/tg.svg" alt="telegram">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+		crossorigin="anonymous"></script>
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/three.min.js"></script>
+	<script src="js/vanta.net.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/select2.min.js"></script>
+	<script src="js/phone-masks.js"></script>
+	<script src="js/mask.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

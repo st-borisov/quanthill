@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<div class="cursor-dot"></div>
+	<div class="cursor-dot-outline"></div>
+
+	<nav class="navbar" id="header">
+		<div class="container">
+			<div class="w-100 d-flex justify-content-between align-items-center">
+				<div class="navbar__left">
+					<a class="navbar-brand" href="#">
+						<img src="img/header/logo.svg" alt="лого quanthill">
+					</a>
+				</div>
+				<ul class="navbar-nav d-none d-lg-flex">
+					<li class="nav-item">
+						<a class="nav-link" href="#">О нас</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Услуги</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Стратегии</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Документы</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Контакты</a>
+					</li>
+				</ul>
+				<div class="navbar__right d-flex align-items-center">
+					<div class="navbar__links d-flex align-items-center">
+						<a href="#" class="btn-1 navbar__btn">Связаться</a>
+						<a href="#" class="navbar__lk d-none d-sm-flex">
+							<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M0 22.5033H22.1244C22.1244 18.852 20.3578 15.6141 17.6267 13.6014C15.988 15.368 13.6506 16.4801 11.0573 16.4801C8.46397 16.4801 6.13146 15.368 4.48787 13.6014C1.76661 15.6141 0 18.852 0 22.5033Z"
+									fill="#1D1D1B" />
+								<path
+									d="M11.062 14.9989C15.2038 14.9989 18.5614 11.6413 18.5614 7.49947C18.5614 3.35763 15.2038 0 11.062 0C6.92013 0 3.5625 3.35763 3.5625 7.49947C3.5625 11.6413 6.92013 14.9989 11.062 14.9989Z"
+									fill="#0047AB" />
+							</svg>
+						</a>
+					</div>
+					<div class="navbar__lang d-none d-lg-flex align-items-center">
+						<a href="#" class="active">EN</a>
+						<a href="#">RU</a>
+					</div>
+					<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+						aria-controls="offcanvasNavbar">
+						<span class="navbar-toggler-icon">
+							<svg width="38" height="30" viewBox="0 0 38 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M31.6165 24.8976H5.63251C3.62209 24.8976 1.77691 24.1677 0.344832 22.9698C0.220902 23.4379 0.124512 23.9199 0.124512 24.4156C0.124512 27.4588 2.58934 29.9236 5.63251 29.9236H31.6165C34.6597 29.9236 37.1245 27.4588 37.1245 24.4156C37.1245 23.9061 37.0281 23.4242 36.9042 22.9698C35.4721 24.1677 33.6269 24.8976 31.6165 24.8976Z"
+									fill="#1D1D1B" />
+								<path
+									d="M5.63251 20.7666H31.6165C34.6597 20.7666 37.1245 18.3017 37.1245 15.2586C37.1245 14.7491 37.0281 14.2671 36.9042 13.8127C35.4721 15.0107 33.6269 15.7405 31.6165 15.7405H5.63251C3.62209 15.7405 1.77691 15.0107 0.344832 13.8127C0.220902 14.2809 0.124512 14.7628 0.124512 15.2586C0.124512 18.3017 2.58934 20.7666 5.63251 20.7666Z"
+									fill="#1D1D1B" />
+								<path
+									d="M5.63251 11.5957H31.6165C34.6597 11.5957 37.1245 9.1309 37.1245 6.08773C37.1245 3.04456 34.6597 0.579727 31.6165 0.579727H5.63251C2.58934 0.579727 0.124512 3.04456 0.124512 6.08773C0.124512 9.1309 2.58934 11.5957 5.63251 11.5957Z"
+									fill="#0047AB" />
+							</svg>
+						</span>
+					</button>
+					<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+						aria-labelledby="offcanvasNavbarLabel">
+						<div class="offcanvas-header d-flex justify-content-sm-end justify-content-between">
+							<a href="#" class="offcanvas__logo d-sm-none">
+								<img src="img/header/logo-light.svg" alt="logo">
+							</a>
+							<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть">
+								<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M20.08 14.42L14.42 20.08L19.18 24.84C20.74 26.4 23.27 26.4 24.84 24.84C26.4 23.28 26.4 20.75 24.84 19.18L20.08 14.42Z"
+										fill="white" />
+									<path
+										d="M5.93 11.59L11.59 5.93L6.83 1.17C5.27 -0.39 2.73 -0.39 1.17 1.17C-0.39 2.73 -0.39 5.27 1.17 6.83L5.93 11.59Z"
+										fill="white" />
+									<path
+										d="M24.84 1.17C23.28 -0.39 20.75 -0.39 19.18 1.17L1.17 19.18C-0.39 20.74 -0.39 23.27 1.17 24.84C2.73 26.4 5.26 26.4 6.83 24.84L24.84 6.83C26.4 5.27 26.4 2.74 24.84 1.17Z"
+										fill="white" />
+								</svg>
+							</button>
+						</div>
+						<div class="offcanvas-body d-flex flex-column justify-content-between align-items-start main-navigation">
+							<ul class="navbar-nav">
+								<li class="nav-item">
+									<a class="nav-link" href="#">О нас</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Почему мы</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Услуги</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Стратегии</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Вопрос-ответ</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Карьера</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Документы</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Контакты</a>
+								</li>
+							</ul>
+							<div class="offcanvas__group d-flex flex-column align-items-start">
+								<a href="#" class="btn-1 navbar__btn">
+									<span>Личный кабинет</span>
+									<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M0 22.5033H22.1244C22.1244 18.852 20.3578 15.614 17.6267 13.6014C15.988 15.368 13.6506 16.4801 11.0573 16.4801C8.46397 16.4801 6.13146 15.368 4.48787 13.6014C1.76661 15.614 0 18.852 0 22.5033Z"
+											fill="white" />
+										<path
+											d="M11.0622 14.9989C15.2041 14.9989 18.5617 11.6413 18.5617 7.49947C18.5617 3.35763 15.2041 0 11.0622 0C6.92037 0 3.56274 3.35763 3.56274 7.49947C3.56274 11.6413 6.92037 14.9989 11.0622 14.9989Z"
+											fill="white" />
+									</svg>
+								</a>
+								<div class="navbar__contacts d-flex align-items-sm-center flex-column flex-sm-row align-items-start">
+									<a href="tel:88006003887" class="navbar__phone">88006003887</a>
+									<a href="mailto:mail@quanthill.ae" class="navbar__mail">mail@quanthill.ae</a>
+									<a href="#" target="_blank" rel="nofollow" class="navbar__social">
+										<img src="img/header/tg.svg" alt="телеграм">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<main class="term-page">
+
+		<div class="breadcrumbs">
+			<div class="container">
+				<nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '-';">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="#">Главная</a></li>
+						<li class="breadcrumb-item"><a href="#">Новости</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Стейкхолдер</li>
+					</ol>
+				</nav>
+			</div>
+		</div>
+
+
+		<section class="term">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="term-main content-main d-flex flex-lg-row flex-column">
+							<div class="content">
+								<h1>Кто такой стейкхолдер?</h1>
+
+								<div class="block">
+									<div>
+										<p>Стейкхолдер (от англ. stakeholder — акционер, держатель акций/доли) — это лицо, неважно,
+											физическое или юридическое, заинтересованное в успехе компании или влияющее в той или иной мере на
+											результаты. Простыми словами, стейкхолдер — это любой человек, который может повлиять на качество
+											продукта, выпускаемого компанией, или заинтересованный в его хорошем исполнении. </p>
+									</div>
+									<div class="term__group d-flex align-items-lg-center flex-lg-row flex-column">
+										<div class="term__image">
+											<img src="img/news-detailed/image.jpg" alt="фото">
+										</div>
+										<div>
+											<p><strong>Однако, например, руководитель изначально заинтересован в результате, потому что от
+													него
+													зависит прибыль компании, а офис-менеджер — потому что от прибыли компании зависит его
+													зарплата.
+													Как же все-таки определиться с тем, кто — стейкхолдер, а кто точно им не является?</strong>
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="block">
+									<div class="mb-4">
+										<p><strong>Типы и примеры стейкхолдеров</strong></p>
+									</div>
+									<div class="mb-4">
+										<p>Выход 5 февраля данных о замедлении недельной инфляции до +0,16% существенно улучшил настроения
+											на рынке, считает руководитель направления аналитики «Альфа-Инвестиций» Василий Карпунин. «Вряд
+											ли
+											у участников теперь есть сомнения в том, что ЦБ сохранит ключевую ставку на уровне 21%.
+											Складывается ситуация, когда все больше инвесторов будут рассчитывать на завершения цикла
+											ужесточения ДКП», — говорит он.</p>
+									</div>
+									<div class="term__h4 mb-4">
+										<div>
+											<p><strong>Есть несколько классификаций, но если привести их к единому виду, получится всего три
+													типа:</strong></p>
+										</div>
+									</div>
+									<div>
+										<ol>
+											<li><strong>Активно участвующие в проекте.</strong> Те, кто непосредственно создает продукт и
+												отвечает за его исполнение и итоговый результат. Это все члены команды, работающей над проектом,
+												заказчик, партнеры, подрядчики или поставщики и, конечно, менеджер.</li>
+											<li><strong>Использующие готовый результат.</strong> Все, кто заинтересован в уже готовом
+												продукте,
+												получающие выгоду от его реализации. Что интересно, к этой категории относятся как конечные
+												потребители — покупатели и клиенты, так и пассивные потребители результатов в лице партнеров и
+												инвесторов. </li>
+											<li><strong>Влияющие на результат, но не участвующие в его создании.</strong> Это самая интересная
+												категория лиц, потому что люди, которые входят в нее, могут вообще никак не соприкасаться с
+												проектом, но при этом итоговый результат может очень сильно зависеть от их участия. Сюда обычно
+												относят надзорные органы, медиа, акционеров компании-производителя и учредителей
+												компании-заказчика, даже конкурентов (!).</li>
+										</ol>
+									</div>
+									<div>
+										<div class="news-detailed__video position-relative" data-bs-toggle="modal"
+											data-bs-target="#videoModal"
+											data-video-url="https://www.youtube.com/embed/uCNWuSbPnt4?si=89TnSJvai0oxr3Fi">
+											<div class="news-detailed__box box">
+												<img src="img/news-detailed/video.jpg" alt="обложка">
+											</div>
+											<div class="news-detailed__play position-absolute">
+												<svg width="36" height="44" viewBox="0 0 36 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M33.1288 17.166L12.0012 3.65741C10.2708 2.55354 7.99612 3.7816 7.99612 5.80996C7.99612 6.67926 8.44268 7.49336 9.18228 7.96251L29.3889 20.8778C30.4495 21.5539 30.4495 23.0993 29.3889 23.7892L7.88448 37.5324C6.72623 38.2775 5.20516 37.4496 5.20516 36.0836V2.58114C5.20516 1.71184 4.7586 0.897739 4.01899 0.414796C2.27464 -0.689074 0 0.538981 0 2.58114V38.3603C0 42.8172 4.99583 45.5079 8.79155 43.0932L33.1427 27.5424C36.9524 25.1139 36.9524 19.5945 33.1427 17.166H33.1288Z"
+														fill="white" />
+													<path
+														d="M9.76836 33.0341L25.1047 23.251C25.7746 22.8233 25.7746 21.8712 25.1047 21.4435L9.76836 11.6328C9.00084 11.1499 7.9961 11.688 7.9961 12.5849V32.0682C7.9961 32.9651 9.00084 33.517 9.76836 33.0203V33.0341Z"
+														fill="white" />
+												</svg>
+											</div>
+										</div>
+										<!-- Модальное окно -->
+										<div class="modal modal-video fade" id="videoModal" tabindex="-1"
+											aria-labelledby="exampleModalLabel" aria-hidden="true">
+											<div class="modal-dialog modal-dialog-centered">
+												<div class="modal-content">
+													<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+													<iframe id="videoIframe" src="" title="YouTube video player" frameborder="0"
+														allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+														referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="position-relative">
+										<button class="slick-prev slick-arrow news-detailed__slider-prev" aria-label="Previous"
+											type="button">
+											<svg width="50" height="63" viewBox="0 0 50 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M44.9683 0.502002L1.42631 28.8314C-0.475436 30.0701 -0.475436 32.8271 1.42631 34.0658L44.9683 62.4751C47.1474 63.8736 50 62.3153 50 59.7181L50 3.29899C50 0.70179 47.1474 -0.896487 44.9683 0.54196V0.502002Z"
+													fill="#0047AB" />
+											</svg>
+										</button>
+										<div class="news-detailed__slider">
+											<a href="img/news-detailed/slide-1.jpg" class="news-detailed__slide" data-fancybox="images">
+												<img src="img/news-detailed/slide-1.jpg" alt="фото">
+											</a>
+											<a href="img/news-detailed/slide-2.jpg" class="news-detailed__slide" data-fancybox="images">
+												<img src="img/news-detailed/slide-2.jpg" alt="фото">
+											</a>
+											<a href="img/news-detailed/slide-3.jpg" class="news-detailed__slide" data-fancybox="images">
+												<img src="img/news-detailed/slide-3.jpg" alt="фото">
+											</a>
+											<a href="img/news-detailed/slide-1.jpg" class="news-detailed__slide" data-fancybox="images">
+												<img src="img/news-detailed/slide-1.jpg" alt="фото">
+											</a>
+											<a href="img/news-detailed/slide-2.jpg" class="news-detailed__slide" data-fancybox="images">
+												<img src="img/news-detailed/slide-2.jpg" alt="фото">
+											</a>
+											<a href="img/news-detailed/slide-3.jpg" class="news-detailed__slide" data-fancybox="images">
+												<img src="img/news-detailed/slide-3.jpg" alt="фото">
+											</a>
+										</div>
+										<button class="slick-next slick-arrow news-detailed__slider-next" aria-label="Next" type="button">
+											<svg width="50" height="63" viewBox="0 0 50 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M5.0317 62.498L48.5737 34.1686C50.4754 32.9299 50.4754 30.1729 48.5737 28.9342L5.0317 0.524918C2.85261 -0.873572 0 0.684745 0 3.28194V59.701C0 62.2982 2.85261 63.8965 5.0317 62.458V62.498Z"
+													fill="#0047AB" />
+											</svg>
+										</button>
+									</div>
+									<div class="mb-4">
+										<p>Выход 5 февраля данных о замедлении недельной инфляции до +0,16% существенно улучшил настроения
+											на рынке, считает руководитель направления аналитики «Альфа-Инвестиций» Василий Карпунин. «Вряд ли
+											у участников теперь есть сомнения в том, что ЦБ сохранит ключевую ставку на уровне 21%.
+											Складывается ситуация, когда все больше инвесторов будут рассчитывать на завершения цикла
+											ужесточения ДКП», — говорит он.
+										</p>
+									</div>
+									<div>
+										<ol>
+											<li><strong>Активно участвующие в проекте.</strong> Те, кто непосредственно создает продукт и
+												отвечает за его исполнение и итоговый результат. Это все члены команды, работающей над проектом,
+												заказчик, партнеры, подрядчики или поставщики и, конечно, менеджер.</li>
+											<li><strong>Использующие готовый результат.</strong>Все, кто заинтересован в уже готовом продукте,
+												получающие выгоду от его реализации. Что интересно, к этой категории относятся как конечные
+												потребители — покупатели и клиенты, так и пассивные потребители результатов в лице партнеров и
+												инвесторов. </li>
+											<li><strong>Влияющие на результат, но не участвующие в его создании.</strong>Это самая интересная
+												категория лиц, потому что люди, которые входят в нее, могут вообще никак не соприкасаться с
+												проектом, но при этом итоговый результат может очень сильно зависеть от их участия. Сюда обычно
+												относят надзорные органы, медиа, акционеров компании-производителя и учредителей
+												компании-заказчика, даже конкурентов (!).</li>
+										</ol>
+									</div>
+								</div>
+
+							</div>
+							<!--  -->
+							<div class="news-sidebar">
+								<h2 class="more-news__title">Новости</h2>
+								<div class="more-news__items">
+									<div class="news-item">
+										<a href="" class="news-item__link link"></a>
+										<div class="news-item__image box"><img src="img/news/image-1.jpg" alt="фото"></div>
+										<div class="news-item__content">
+											<p class="name news-item__name">«Готовы к сюрпризам»? Как инвестору переждать неопределенность
+												на
+												рынке
+											</p>
+											<div class="news-item__text text">
+												<p>Риск потерять на рынке весь инвестированный капитал есть всегда. Но в условиях
+													неопределенности
+													он
+													увеличивается. Разбираемся, что инвестору учесть за неделю до заседания ЦБ по ставке.</p>
+											</div>
+											<div class="news-item__bottom d-flex justify-content-between align-items-end">
+												<a href="" class="btn-1 news-item__read">Читать</a>
+												<time datetime="" class="news-item__date">01.02.2025</time>
+											</div>
+										</div>
+									</div>
+									<div class="news-item">
+										<a href="" class="news-item__link link"></a>
+										<div class="news-item__image box"><img src="img/news/image-1.jpg" alt="фото"></div>
+										<div class="news-item__content">
+											<p class="name news-item__name">«Готовы к сюрпризам»? Как инвестору переждать неопределенность
+												на
+												рынке
+											</p>
+											<div class="news-item__text text">
+												<p>Риск потерять на рынке весь инвестированный капитал есть всегда. Но в условиях
+													неопределенности
+													он
+													увеличивается. Разбираемся, что инвестору учесть за неделю до заседания ЦБ по ставке.</p>
+											</div>
+											<div class="news-item__bottom d-flex justify-content-between align-items-end">
+												<a href="" class="btn-1 news-item__read">Читать</a>
+												<time datetime="" class="news-item__date">01.02.2025</time>
+											</div>
+										</div>
+									</div>
+									<div class="news-item">
+										<a href="" class="news-item__link link"></a>
+										<div class="news-item__image box"><img src="img/news/image-1.jpg" alt="фото"></div>
+										<div class="news-item__content">
+											<p class="name news-item__name">«Готовы к сюрпризам»? Как инвестору переждать неопределенность
+												на
+												рынке
+											</p>
+											<div class="news-item__text text">
+												<p>Риск потерять на рынке весь инвестированный капитал есть всегда. Но в условиях
+													неопределенности
+													он
+													увеличивается. Разбираемся, что инвестору учесть за неделю до заседания ЦБ по ставке.</p>
+											</div>
+											<div class="news-item__bottom d-flex justify-content-between align-items-end">
+												<a href="" class="btn-1 news-item__read">Читать</a>
+												<time datetime="" class="news-item__date">01.02.2025</time>
+											</div>
+										</div>
+									</div>
+									<div class="news-item">
+										<a href="" class="news-item__link link"></a>
+										<div class="news-item__image box"><img src="img/news/image-1.jpg" alt="фото"></div>
+										<div class="news-item__content">
+											<p class="name news-item__name">«Готовы к сюрпризам»? Как инвестору переждать неопределенность
+												на
+												рынке
+											</p>
+											<div class="news-item__text text">
+												<p>Риск потерять на рынке весь инвестированный капитал есть всегда. Но в условиях
+													неопределенности
+													он
+													увеличивается. Разбираемся, что инвестору учесть за неделю до заседания ЦБ по ставке.</p>
+											</div>
+											<div class="news-item__bottom d-flex justify-content-between align-items-end">
+												<a href="" class="btn-1 news-item__read">Читать</a>
+												<time datetime="" class="news-item__date">01.02.2025</time>
+											</div>
+										</div>
+									</div>
+									<div class="news-item">
+										<a href="" class="news-item__link link"></a>
+										<div class="news-item__image box"><img src="img/news/image-1.jpg" alt="фото"></div>
+										<div class="news-item__content">
+											<p class="name news-item__name">«Готовы к сюрпризам»? Как инвестору переждать неопределенность
+												на
+												рынке
+											</p>
+											<div class="news-item__text text">
+												<p>Риск потерять на рынке весь инвестированный капитал есть всегда. Но в условиях
+													неопределенности
+													он
+													увеличивается. Разбираемся, что инвестору учесть за неделю до заседания ЦБ по ставке.</p>
+											</div>
+											<div class="news-item__bottom d-flex justify-content-between align-items-end">
+												<a href="" class="btn-1 news-item__read">Читать</a>
+												<time datetime="" class="news-item__date">01.02.2025</time>
+											</div>
+										</div>
+									</div>
+									<div class="news-item">
+										<a href="" class="news-item__link link"></a>
+										<div class="news-item__image box"><img src="img/news/image-1.jpg" alt="фото"></div>
+										<div class="news-item__content">
+											<p class="name news-item__name">«Готовы к сюрпризам»? Как инвестору переждать неопределенность
+												на
+												рынке
+											</p>
+											<div class="news-item__text text">
+												<p>Риск потерять на рынке весь инвестированный капитал есть всегда. Но в условиях
+													неопределенности
+													он
+													увеличивается. Разбираемся, что инвестору учесть за неделю до заседания ЦБ по ставке.</p>
+											</div>
+											<div class="news-item__bottom d-flex justify-content-between align-items-end">
+												<a href="" class="btn-1 news-item__read">Читать</a>
+												<time datetime="" class="news-item__date">01.02.2025</time>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 d-flex justify-content-between align-items-center flex-column flex-sm-row flex-wrap">
+						<div class="footer-top__left">
+							<a href="#" class="footer-top__logo">
+								<img src="img/footer/logo.svg" alt="logo quanthill">
+							</a>
+						</div>
+						<ul class="nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#">О нас</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Почему мы</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Документы</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Карьера</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Вопрос-ответ</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Стратегии</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Правовая информация</a>
+							</li>
+						</ul>
+						<div class="footer-top__right d-flex align-items-center">
+							<div class="footer-top__group d-flex align-items-start">
+								<a href="tel:88006003887" class="footer-top__phone">8 (800) 600-38-87</a>
+								<a href="mailto:mail@quanthill.ae" class="footer-top__mail">mail@quanthill.ae</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row footer-bottom">
+					<div class="col-12 d-flex justify-content-between align-items-center flex-column flex-lg-row">
+						<p class="footer-bottom__copyright">© 2014 - 2025 Quanthill - FZE. Все права защищены</p>
+						<div class="footer-bottom__links d-flex align-items-center flex-column flex-lg-row">
+							<a target="_blank" href="#">Положение об обработке персональных данных</a>
+							<a target="_blank" href="#">Пользовательское соглашение</a>
+							<a target="_blank" href="#">Согласие на обработку данных метрическими программами</a>
+						</div>
+						<div class="footer-bottom__right d-flex align-items-center">
+							<p class="footer-bottom__legal d-lg-none">Telegram</p>
+							<a href="https://t.me/quanthillpublic" target="_blank" rel="nofollow" class="footer-bottom__social">
+								<img src="img/header/tg.svg" alt="telegram">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+		crossorigin="anonymous"></script>
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/three.min.js"></script>
+	<script src="js/vanta.net.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/select2.min.js"></script>
+	<script src="js/phone-masks.js"></script>
+	<script src="js/mask.js"></script>
+	<script src="js/script.js"></script>
+
+	<!-- липкий сайдбар -->
+	<script src="js/theia-sticky-sidebar.min.js"></script>
+	<script src="js/ResizeSensor.min.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function () {
+			jQuery('.content, .news-sidebar').theiaStickySidebar({
+				additionalMarginTop: 100,
+			});
+		});
+	</script>
+	<!-- end -->
+
+	<!-- fancybox -->
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+	<script>
+		Fancybox.bind('[data-fancybox="images"]', {
+		});
+	</script>
+	<!-- end -->
+</body>
+
+</html>

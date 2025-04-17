@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<div class="cursor-dot"></div>
+	<div class="cursor-dot-outline"></div>
+
+	<nav class="navbar" id="header">
+		<div class="container">
+			<div class="w-100 d-flex justify-content-between align-items-center">
+				<div class="navbar__left">
+					<a class="navbar-brand" href="#">
+						<img src="img/header/logo.svg" alt="лого quanthill">
+					</a>
+				</div>
+				<ul class="navbar-nav d-none d-lg-flex">
+					<li class="nav-item">
+						<a class="nav-link" href="#">О нас</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Услуги</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Стратегии</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Документы</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Контакты</a>
+					</li>
+				</ul>
+				<div class="navbar__right d-flex align-items-center">
+					<div class="navbar__links d-flex align-items-center">
+						<a href="#" class="btn-1 navbar__btn">Связаться</a>
+						<a href="#" class="navbar__lk d-none d-sm-flex">
+							<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M0 22.5033H22.1244C22.1244 18.852 20.3578 15.6141 17.6267 13.6014C15.988 15.368 13.6506 16.4801 11.0573 16.4801C8.46397 16.4801 6.13146 15.368 4.48787 13.6014C1.76661 15.6141 0 18.852 0 22.5033Z"
+									fill="#1D1D1B" />
+								<path
+									d="M11.062 14.9989C15.2038 14.9989 18.5614 11.6413 18.5614 7.49947C18.5614 3.35763 15.2038 0 11.062 0C6.92013 0 3.5625 3.35763 3.5625 7.49947C3.5625 11.6413 6.92013 14.9989 11.062 14.9989Z"
+									fill="#0047AB" />
+							</svg>
+						</a>
+					</div>
+					<div class="navbar__lang d-none d-lg-flex align-items-center">
+						<a href="#" class="active">EN</a>
+						<a href="#">RU</a>
+					</div>
+					<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+						aria-controls="offcanvasNavbar">
+						<span class="navbar-toggler-icon">
+							<svg width="38" height="30" viewBox="0 0 38 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M31.6165 24.8976H5.63251C3.62209 24.8976 1.77691 24.1677 0.344832 22.9698C0.220902 23.4379 0.124512 23.9199 0.124512 24.4156C0.124512 27.4588 2.58934 29.9236 5.63251 29.9236H31.6165C34.6597 29.9236 37.1245 27.4588 37.1245 24.4156C37.1245 23.9061 37.0281 23.4242 36.9042 22.9698C35.4721 24.1677 33.6269 24.8976 31.6165 24.8976Z"
+									fill="#1D1D1B" />
+								<path
+									d="M5.63251 20.7666H31.6165C34.6597 20.7666 37.1245 18.3017 37.1245 15.2586C37.1245 14.7491 37.0281 14.2671 36.9042 13.8127C35.4721 15.0107 33.6269 15.7405 31.6165 15.7405H5.63251C3.62209 15.7405 1.77691 15.0107 0.344832 13.8127C0.220902 14.2809 0.124512 14.7628 0.124512 15.2586C0.124512 18.3017 2.58934 20.7666 5.63251 20.7666Z"
+									fill="#1D1D1B" />
+								<path
+									d="M5.63251 11.5957H31.6165C34.6597 11.5957 37.1245 9.1309 37.1245 6.08773C37.1245 3.04456 34.6597 0.579727 31.6165 0.579727H5.63251C2.58934 0.579727 0.124512 3.04456 0.124512 6.08773C0.124512 9.1309 2.58934 11.5957 5.63251 11.5957Z"
+									fill="#0047AB" />
+							</svg>
+						</span>
+					</button>
+					<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+						aria-labelledby="offcanvasNavbarLabel">
+						<div class="offcanvas-header d-flex justify-content-sm-end justify-content-between">
+							<a href="#" class="offcanvas__logo d-sm-none">
+								<img src="img/header/logo-light.svg" alt="logo">
+							</a>
+							<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть">
+								<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M20.08 14.42L14.42 20.08L19.18 24.84C20.74 26.4 23.27 26.4 24.84 24.84C26.4 23.28 26.4 20.75 24.84 19.18L20.08 14.42Z"
+										fill="white" />
+									<path
+										d="M5.93 11.59L11.59 5.93L6.83 1.17C5.27 -0.39 2.73 -0.39 1.17 1.17C-0.39 2.73 -0.39 5.27 1.17 6.83L5.93 11.59Z"
+										fill="white" />
+									<path
+										d="M24.84 1.17C23.28 -0.39 20.75 -0.39 19.18 1.17L1.17 19.18C-0.39 20.74 -0.39 23.27 1.17 24.84C2.73 26.4 5.26 26.4 6.83 24.84L24.84 6.83C26.4 5.27 26.4 2.74 24.84 1.17Z"
+										fill="white" />
+								</svg>
+							</button>
+						</div>
+						<div class="offcanvas-body d-flex flex-column justify-content-between align-items-start main-navigation">
+							<ul class="navbar-nav">
+								<li class="nav-item">
+									<a class="nav-link" href="#">О нас</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Почему мы</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Услуги</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Стратегии</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Вопрос-ответ</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Карьера</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Документы</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Контакты</a>
+								</li>
+							</ul>
+							<div class="offcanvas__group d-flex flex-column align-items-start">
+								<a href="#" class="btn-1 navbar__btn">
+									<span>Личный кабинет</span>
+									<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M0 22.5033H22.1244C22.1244 18.852 20.3578 15.614 17.6267 13.6014C15.988 15.368 13.6506 16.4801 11.0573 16.4801C8.46397 16.4801 6.13146 15.368 4.48787 13.6014C1.76661 15.614 0 18.852 0 22.5033Z"
+											fill="white" />
+										<path
+											d="M11.0622 14.9989C15.2041 14.9989 18.5617 11.6413 18.5617 7.49947C18.5617 3.35763 15.2041 0 11.0622 0C6.92037 0 3.56274 3.35763 3.56274 7.49947C3.56274 11.6413 6.92037 14.9989 11.0622 14.9989Z"
+											fill="white" />
+									</svg>
+								</a>
+								<div class="navbar__contacts d-flex align-items-sm-center flex-column flex-sm-row align-items-start">
+									<a href="tel:88006003887" class="navbar__phone">88006003887</a>
+									<a href="mailto:mail@quanthill.ae" class="navbar__mail">mail@quanthill.ae</a>
+									<a href="#" target="_blank" rel="nofollow" class="navbar__social">
+										<img src="img/header/tg.svg" alt="телеграм">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<main class="careers-page">
+
+		<div class="graph-anim"></div>
+
+		<!-- Модальное окно (Join team) -->
+		<div class="modal fade" id="modal-join-team" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body">
+						<p class="modal__title mb-lg-4">Join team</p>
+						<div class="modal__form">
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby="" placeholder="Full name">
+							</div>
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby=""
+									placeholder="Name of Company or Individual Represented" name="company">
+							</div>
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby=""
+									placeholder="City / Country" name="city">
+							</div>
+							<div class="mb-lg-4">
+								<input type="email" class="form-control modal__input" id="" aria-describedby="" placeholder="Email"
+									name="email">
+							</div>
+							<div class="mb-lg-4">
+								<div class="phone-input">
+									<select class="phone-input__country"></select>
+									<div class="phone-input__phone">
+										<input class="phone-input__phone-placeholder" placeholder="123" />
+										<input class="phone-input__phone-number" />
+									</div>
+								</div>
+							</div>
+							<div class="mb-lg-4 d-flex flex-column align-items-start">
+								<label for="" class="modal__label">CV</label>
+								<div class="upload-file__wrapper">
+									<input type="file" name="files[]" id="upload-file__input_1" class="upload-file__input"
+										accept=".jpg, .jpeg, .png, .gif, .bmp, .doc, .docx, .xls, .xlsx, .txt, .tar, .zip, .7z, .7zip"
+										multiple>
+									<label class="upload-file__label" for="upload-file__input_1">
+										<span class="upload-file__text text-truncate">Загрузить файл</span>
+									</label>
+								</div>
+							</div>
+							<button class="btn-1 modal__send">Send</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section class="careers-main-screen section-first">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 d-flex flex-column align-items-sm-start align-items-center text-center text-sm-start">
+						<h1 class="title-page careers-main-screen__title">Become part</h1>
+						<div class="careers-main-screen__text text mt-2">
+							<p>of a professional asset management team</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="careers-faq">
+			<div class="container">
+				<div class="row mb-5">
+					<div class="col-12 d-flex justify-content-center justify-content-sm-start">
+						<h2 class="section-title careers-faq__title text-center text-sm-start">
+							Explore Careers at Quant Hill
+						</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<div class="careers-faq__content">
+							<div class="accordion accordion-flush" id="accordionFlushExample">
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+											data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+											Senior Quantitative Trader / Researcher
+										</button>
+									</h2>
+									<div id="flush-collapseOne" class="accordion-collapse collapse"
+										data-bs-parent="#accordionFlushExample">
+										<div class="accordion-body">
+											<div class="careers-faq__wrap">
+												<div class="careers-faq__group">
+													<p class="careers-faq__name">Expectations from the Candidate:</p>
+													<div class="careers-faq__text text">
+														<p>We are seeking an experienced senior quantitative analyst with a proven track record in
+															developing and implementing trading systems, who understands how to adjust algorithms,
+															research the effectiveness of strategies, is not afraid to tackle complex research tasks,
+															and will ultimately strengthen our team.
+														</p>
+													</div>
+												</div>
+												<div class="careers-faq__group">
+													<p class="careers-faq__name">Responsibilities:</p>
+													<ul>
+														<li>Analyze financial data to identify inefficiencies and anomalies across various financial
+															markets;</li>
+														<li>Review scientific journals, financial literature, and other sources to translate
+															cutting-edge research into automated trading strategies;</li>
+														<li>Develop, backtest, and implement trading systems based on statistical/quantitative
+															analysis;</li>
+														<li>Monitor execution and analyze the performance of trading strategies;</li>
+														<li>Present results in the form of presentations, reports, and articles;</li>
+														<li>Collaborate with a team of developers and analysts.
+														</li>
+													</ul>
+												</div>
+												<div class="careers-faq__group">
+													<p class="careers-faq__name">Candidate Requirements:</p>
+													<ul>
+														<li>A degree in mathematics, engineering, or economics;</li>
+														<li>Strong Python 3+ programming skills;</li>
+														<li>Ability to work with market data and its sources;</li>
+														<li>Skills in using quantitative and statistical analysis methods;</li>
+														<li>Experience in trading financial products using quantitative/systematic methods;</li>
+														<li>Research-oriented mindset: thoughtfulness, creativity, perseverance, intelligence,
+															initiative, attention to detail, critical thinking, etc.
+														</li>
+													</ul>
+												</div>
+												<div class="careers-faq__group">
+													<p class="careers-faq__name">Advantages:</p>
+													<ul>
+														<li>Verified achievements in related fields (academic degree, publications, grants, awards,
+															etc.);</li>
+														<li>Experience in hedge funds, investment companies;</li>
+														<li>A ready-to-deploy trading strategy with significant capacity;</li>
+														<li>Experience in applying and utilizing machine learning and other big data methods;</li>
+														<li>Deep knowledge of financial economics, the cryptocurrency market, blockchain technology;
+														</li>
+														<li>Proficiency in Linux, SQL, Git.</li>
+													</ul>
+												</div>
+												<div class="careers-faq__group">
+													<p class="careers-faq__name">Tech Stack:</p>
+													<div class="careers-faq__text text">
+														<p>Python, Pandas, NumPy, SciPy, Scikit-learn, Linux, Git, Jira</p>
+													</div>
+												</div>
+												<div class="careers-faq__group">
+													<p class="careers-faq__name">What We Offer:</p>
+													<ul>
+														<li>Competitive salary and performance bonuses;</li>
+														<li>Use of proprietary technologies;</li>
+														<li>5/2 work schedule with flexible start times;</li>
+														<li>Significant opportunities for professional growth and self-improvement;</li>
+														<li>Compensation package for children’s education, fitness, insurance, etc.;</li>
+														<li>Employee loyalty program in company products and referral bonuses;</li>
+														<li>Paid sick leave;</li>
+														<li>Corporate events;</li>
+														<li>Provision of workplace and necessary equipment;</li>
+														<li>Access to educational resources and professional training courses;</li>
+														<li>Flexible management and minimal bureaucracy in company processes.</li>
+													</ul>
+												</div>
+												<div class="careers-faq__group">
+													<button class="careers-faq__link" data-bs-toggle="modal"
+														data-bs-target="#modal-join-team">Apply</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+											data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+											Personal Manager / Financial Advisor
+										</button>
+									</h2>
+									<div id="flush-collapseTwo" class="accordion-collapse collapse"
+										data-bs-parent="#accordionFlushExample">
+										<div class="accordion-body">
+											<div class="careers-faq__wrap">
+												<div class="careers-faq__group">
+													<p class="careers-faq__name">Responsibilities:</p>
+													<ul>
+														<li>Build your personal client portfolio by attracting new clients;</li>
+														<li>Develop the existing client base;</li>
+														<li>Conduct business meetings with clients, present the company’s products;</li>
+														<li>Establish long-term relationships with clients;</li>
+														<li>Achieve individual performance targets.</li>
+													</ul>
+												</div>
+												<div class="careers-faq__group">
+													<p class="careers-faq__name">Requirements:</p>
+													<ul>
+														<li>Experience in sales within the investment and financial sectors (in banks, asset
+															management companies, brokerage firms, investment funds);</li>
+														<li>Understanding of the basics and rules of operation of stock markets, digital asset
+															markets;</li>
+														<li>Higher/unfinished higher education;</li>
+														<li>Ability to communicate with clients, conduct negotiations;</li>
+														<li>Desire to earn well.</li>
+													</ul>
+												</div>
+												<div class="careers-faq__group">
+													<p class="careers-faq__name">What you will get by joining us:</p>
+													<ul>
+														<li>Opportunities for self-realization, professional, career, and social growth;</li>
+														<li>A decent salary + monthly and quarterly performance bonuses;</li>
+														<li>Remote work format;</li>
+														<li>Opportunity for relocation to the capital of Azerbaijan — the city of Baku;</li>
+														<li>Modern office in a high-tech class A business center on the coast of the Caspian Sea;
+														</li>
+														<li>A comfortable and friendly atmosphere in the team, where trust and results are valued.
+														</li>
+													</ul>
+												</div>
+												<div class="careers-faq__group">
+													<button class="careers-faq__link" data-bs-toggle="modal"
+														data-bs-target="#modal-join-team">Apply</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="careers-benefits">
+			<div class="container">
+				<div class="row mb-5 position-relative">
+					<div class="col-12">
+						<div class="careers-benefits__text text text-center text-sm-start">
+							<p>We actively support the continuous professional and career development of our employees. We have
+								created an environment where your professional ideas and suggestions can become the foundation of our
+								collective success.</p>
+						</div>
+						<span class="careers-benefits__num">5</span>
+					</div>
+				</div>
+				<div class="row g-lg-4 g-sm-1 g-4">
+					<div class="col-lg-auto col-sm-6 careers-benefits__wrap">
+						<div class="careers-benefits__item d-flex align-items-center">
+							<span>1</span>
+							<p>Professionalism and Honesty</p>
+						</div>
+					</div>
+					<div class="col-lg-auto col-sm-6 careers-benefits__wrap">
+						<div class="careers-benefits__item d-flex align-items-center">
+							<span>2</span>
+							<p>Ambition</p>
+						</div>
+					</div>
+					<div
+						class="col-lg-auto col-12 careers-benefits__wrap d-flex flex-lg-column justify-content-sm-center justify-content-lg-start">
+						<div class="careers-benefits__item d-flex align-items-center">
+							<span>3</span>
+							<p>Analytical Thinking</p>
+						</div>
+					</div>
+					<div class="col-lg-auto col-sm-6 careers-benefits__wrap">
+						<div class="careers-benefits__item d-flex align-items-center">
+							<span>4</span>
+							<p>Merit-based Reward System</p>
+						</div>
+					</div>
+					<div class="col-lg-auto col-sm-6 careers-benefits__wrap">
+						<div class="careers-benefits__item d-flex align-items-center">
+							<span>5</span>
+							<p>Professional Development and Mentoring Programs</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 d-flex justify-content-between align-items-center flex-column flex-sm-row flex-wrap">
+						<div class="footer-top__left">
+							<a href="#" class="footer-top__logo">
+								<img src="img/footer/logo.svg" alt="logo quanthill">
+							</a>
+						</div>
+						<ul class="nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#">О нас</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Почему мы</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Документы</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Карьера</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Вопрос-ответ</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Стратегии</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Правовая информация</a>
+							</li>
+						</ul>
+						<div class="footer-top__right d-flex align-items-center">
+							<div class="footer-top__group d-flex align-items-start">
+								<a href="tel:88006003887" class="footer-top__phone">8 (800) 600-38-87</a>
+								<a href="mailto:mail@quanthill.ae" class="footer-top__mail">mail@quanthill.ae</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row footer-bottom">
+					<div class="col-12 d-flex justify-content-between align-items-center flex-column flex-lg-row">
+						<p class="footer-bottom__copyright">© 2014 - 2025 Quanthill - FZE. Все права защищены</p>
+						<div class="footer-bottom__links d-flex align-items-center flex-column flex-lg-row">
+							<a target="_blank" href="#">Положение об обработке персональных данных</a>
+							<a target="_blank" href="#">Пользовательское соглашение</a>
+							<a target="_blank" href="#">Согласие на обработку данных метрическими программами</a>
+						</div>
+						<div class="footer-bottom__right d-flex align-items-center">
+							<p class="footer-bottom__legal d-lg-none">Telegram</p>
+							<a href="https://t.me/quanthillpublic" target="_blank" rel="nofollow" class="footer-bottom__social">
+								<img src="img/header/tg.svg" alt="telegram">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+		crossorigin="anonymous"></script>
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/three.min.js"></script>
+	<script src="js/vanta.net.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/select2.min.js"></script>
+	<script src="js/phone-masks.js"></script>
+	<script src="js/mask.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

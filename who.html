@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<div class="cursor-dot"></div>
+	<div class="cursor-dot-outline"></div>
+
+	<nav class="navbar" id="header">
+		<div class="container">
+			<div class="w-100 d-flex justify-content-between align-items-center">
+				<div class="navbar__left">
+					<a class="navbar-brand" href="#">
+						<img src="img/header/logo.svg" alt="лого quanthill">
+					</a>
+				</div>
+				<ul class="navbar-nav d-none d-lg-flex">
+					<li class="nav-item">
+						<a class="nav-link" href="#">О нас</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Услуги</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Стратегии</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Документы</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Контакты</a>
+					</li>
+				</ul>
+				<div class="navbar__right d-flex align-items-center">
+					<div class="navbar__links d-flex align-items-center">
+						<a href="#" class="btn-1 navbar__btn">Связаться</a>
+						<a href="#" class="navbar__lk d-none d-sm-flex">
+							<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M0 22.5033H22.1244C22.1244 18.852 20.3578 15.6141 17.6267 13.6014C15.988 15.368 13.6506 16.4801 11.0573 16.4801C8.46397 16.4801 6.13146 15.368 4.48787 13.6014C1.76661 15.6141 0 18.852 0 22.5033Z"
+									fill="#1D1D1B" />
+								<path
+									d="M11.062 14.9989C15.2038 14.9989 18.5614 11.6413 18.5614 7.49947C18.5614 3.35763 15.2038 0 11.062 0C6.92013 0 3.5625 3.35763 3.5625 7.49947C3.5625 11.6413 6.92013 14.9989 11.062 14.9989Z"
+									fill="#0047AB" />
+							</svg>
+						</a>
+					</div>
+					<div class="navbar__lang d-none d-lg-flex align-items-center">
+						<a href="#" class="active">EN</a>
+						<a href="#">RU</a>
+					</div>
+					<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+						aria-controls="offcanvasNavbar">
+						<span class="navbar-toggler-icon">
+							<svg width="38" height="30" viewBox="0 0 38 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M31.6165 24.8976H5.63251C3.62209 24.8976 1.77691 24.1677 0.344832 22.9698C0.220902 23.4379 0.124512 23.9199 0.124512 24.4156C0.124512 27.4588 2.58934 29.9236 5.63251 29.9236H31.6165C34.6597 29.9236 37.1245 27.4588 37.1245 24.4156C37.1245 23.9061 37.0281 23.4242 36.9042 22.9698C35.4721 24.1677 33.6269 24.8976 31.6165 24.8976Z"
+									fill="#1D1D1B" />
+								<path
+									d="M5.63251 20.7666H31.6165C34.6597 20.7666 37.1245 18.3017 37.1245 15.2586C37.1245 14.7491 37.0281 14.2671 36.9042 13.8127C35.4721 15.0107 33.6269 15.7405 31.6165 15.7405H5.63251C3.62209 15.7405 1.77691 15.0107 0.344832 13.8127C0.220902 14.2809 0.124512 14.7628 0.124512 15.2586C0.124512 18.3017 2.58934 20.7666 5.63251 20.7666Z"
+									fill="#1D1D1B" />
+								<path
+									d="M5.63251 11.5957H31.6165C34.6597 11.5957 37.1245 9.1309 37.1245 6.08773C37.1245 3.04456 34.6597 0.579727 31.6165 0.579727H5.63251C2.58934 0.579727 0.124512 3.04456 0.124512 6.08773C0.124512 9.1309 2.58934 11.5957 5.63251 11.5957Z"
+									fill="#0047AB" />
+							</svg>
+						</span>
+					</button>
+					<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+						aria-labelledby="offcanvasNavbarLabel">
+						<div class="offcanvas-header d-flex justify-content-sm-end justify-content-between">
+							<a href="#" class="offcanvas__logo d-sm-none">
+								<img src="img/header/logo-light.svg" alt="logo">
+							</a>
+							<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть">
+								<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M20.08 14.42L14.42 20.08L19.18 24.84C20.74 26.4 23.27 26.4 24.84 24.84C26.4 23.28 26.4 20.75 24.84 19.18L20.08 14.42Z"
+										fill="white" />
+									<path
+										d="M5.93 11.59L11.59 5.93L6.83 1.17C5.27 -0.39 2.73 -0.39 1.17 1.17C-0.39 2.73 -0.39 5.27 1.17 6.83L5.93 11.59Z"
+										fill="white" />
+									<path
+										d="M24.84 1.17C23.28 -0.39 20.75 -0.39 19.18 1.17L1.17 19.18C-0.39 20.74 -0.39 23.27 1.17 24.84C2.73 26.4 5.26 26.4 6.83 24.84L24.84 6.83C26.4 5.27 26.4 2.74 24.84 1.17Z"
+										fill="white" />
+								</svg>
+							</button>
+						</div>
+						<div class="offcanvas-body d-flex flex-column justify-content-between align-items-start main-navigation">
+							<ul class="navbar-nav">
+								<li class="nav-item">
+									<a class="nav-link" href="#">О нас</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Почему мы</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Услуги</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Стратегии</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Вопрос-ответ</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Карьера</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Документы</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Контакты</a>
+								</li>
+							</ul>
+							<div class="offcanvas__group d-flex flex-column align-items-start">
+								<a href="#" class="btn-1 navbar__btn">
+									<span>Личный кабинет</span>
+									<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M0 22.5033H22.1244C22.1244 18.852 20.3578 15.614 17.6267 13.6014C15.988 15.368 13.6506 16.4801 11.0573 16.4801C8.46397 16.4801 6.13146 15.368 4.48787 13.6014C1.76661 15.614 0 18.852 0 22.5033Z"
+											fill="white" />
+										<path
+											d="M11.0622 14.9989C15.2041 14.9989 18.5617 11.6413 18.5617 7.49947C18.5617 3.35763 15.2041 0 11.0622 0C6.92037 0 3.56274 3.35763 3.56274 7.49947C3.56274 11.6413 6.92037 14.9989 11.0622 14.9989Z"
+											fill="white" />
+									</svg>
+								</a>
+								<div class="navbar__contacts d-flex align-items-sm-center flex-column flex-sm-row align-items-start">
+									<a href="tel:88006003887" class="navbar__phone">88006003887</a>
+									<a href="mailto:mail@quanthill.ae" class="navbar__mail">mail@quanthill.ae</a>
+									<a href="#" target="_blank" rel="nofollow" class="navbar__social">
+										<img src="img/header/tg.svg" alt="телеграм">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<main class="who-page">
+
+		<div class="graph-anim"></div>
+
+		<!-- Модальное окно (Become a client) -->
+		<div class="modal fade" id="modal-become-client" tabindex="-1" aria-labelledby="exampleModalLabel"
+			aria-hidden="true">
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body">
+						<p class="modal__title mb-lg-4">Become a client</p>
+						<div class="modal__form">
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby="" placeholder="Full name">
+							</div>
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby=""
+									placeholder="Name of Company or Individual Represented" name="company">
+							</div>
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby=""
+									placeholder="City / Country" name="city">
+							</div>
+							<div class="mb-lg-4">
+								<input type="email" class="form-control modal__input" id="" aria-describedby="" placeholder="Email"
+									name="email">
+							</div>
+							<div class="mb-lg-4">
+								<div class="phone-input">
+									<select class="phone-input__country"></select>
+									<div class="phone-input__phone">
+										<input class="phone-input__phone-placeholder" placeholder="123" />
+										<input class="phone-input__phone-number" />
+									</div>
+								</div>
+							</div>
+							<button class="btn-1 modal__send">Send</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Модальное окно (Become a partner) -->
+		<div class="modal fade" id="modal-become-partner" tabindex="-1" aria-labelledby="exampleModalLabel"
+			aria-hidden="true">
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body">
+						<p class="modal__title mb-lg-4">Become a partner</p>
+						<div class="modal__form">
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby="" placeholder="Full name">
+							</div>
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby=""
+									placeholder="Name of Company or Individual Represented" name="company">
+							</div>
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby=""
+									placeholder="City / Country" name="city">
+							</div>
+							<div class="mb-lg-4">
+								<input type="email" class="form-control modal__input" id="" aria-describedby="" placeholder="Email"
+									name="email">
+							</div>
+							<div class="mb-lg-4">
+								<div class="phone-input">
+									<select class="phone-input__country"></select>
+									<div class="phone-input__phone">
+										<input class="phone-input__phone-placeholder" placeholder="123" />
+										<input class="phone-input__phone-number" />
+									</div>
+								</div>
+							</div>
+							<button class="btn-1 modal__send">Send</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Модальное окно (Join team) -->
+		<div class="modal fade" id="modal-join-team" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body">
+						<p class="modal__title mb-lg-4">Join team</p>
+						<div class="modal__form">
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby="" placeholder="Full name">
+							</div>
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby=""
+									placeholder="Name of Company or Individual Represented" name="company">
+							</div>
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby=""
+									placeholder="City / Country" name="city">
+							</div>
+							<div class="mb-lg-4">
+								<input type="email" class="form-control modal__input" id="" aria-describedby="" placeholder="Email"
+									name="email">
+							</div>
+							<div class="mb-lg-4">
+								<div class="phone-input">
+									<select class="phone-input__country"></select>
+									<div class="phone-input__phone">
+										<input class="phone-input__phone-placeholder" placeholder="123" />
+										<input class="phone-input__phone-number" />
+									</div>
+								</div>
+							</div>
+							<div class="mb-lg-4 d-flex flex-column align-items-start">
+								<label for="" class="modal__label">CV</label>
+								<div class="upload-file__wrapper">
+									<input type="file" name="files[]" id="upload-file__input_1" class="upload-file__input"
+										accept=".jpg, .jpeg, .png, .gif, .bmp, .doc, .docx, .xls, .xlsx, .txt, .tar, .zip, .7z, .7zip"
+										multiple>
+									<label class="upload-file__label" for="upload-file__input_1">
+										<span class="upload-file__text text-truncate">Загрузить файл</span>
+									</label>
+								</div>
+							</div>
+							<button class="btn-1 modal__send">Send</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section class="who-main-screen section-first">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 d-flex flex-column align-items-sm-start align-items-center text-center text-sm-start">
+						<h1 class="title-page who-main-screen__title">
+							Innovative financial company
+						</h1>
+						<div class="who-main-screen__text text sub mt-lg-3 mt-4">
+							<p>that uses modern technologies and algorithmic approaches to achieve high efficiency in investing. To
+								make informed investment decisions we rely on mathematical and statistical models enabling us to analyze
+								extensive datasets and make choices grounded in objective factors.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Timeline -->
+		<section class="timeline">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h2 class="section-title timeline__title text-center text-lg-start">Timeline</h2>
+					</div>
+				</div>
+			</div>
+			<div class="timeline__content">
+				<div class="timeline__wrapper position-relative">
+					<div class="timeline__line d-none d-lg-block">
+						<img src="img/who/timeline/line.svg" alt="фото">
+					</div>
+
+					<div class="timeline__line_vertical d-lg-none"></div>
+
+					<div class="timeline__items d-flex flex-column-reverse flex-lg-row">
+						<div class="timeline__item timeline__item_1">
+							<div class="timeline__dot timeline__dot_1"></div>
+							<div class="timeline__date">
+								<p class="timeline__month">Октябрь</p>
+								<p class="timeline__year">2013</p>
+							</div>
+							<p class="timeline__desc">Игорь Шепелев создал идею AIST Invest</p>
+						</div>
+						<div class="timeline__item timeline__item_2">
+							<div class="timeline__dot timeline__dot_2"></div>
+							<div class="timeline__date">
+								<p class="timeline__month">Сентябрь</p>
+								<p class="timeline__year">2014</p>
+							</div>
+							<p class="timeline__desc">Разработана первая версия текущего трендового алгоритма</p>
+						</div>
+						<div class="timeline__item timeline__item_3">
+							<div class="timeline__dot timeline__dot_3"></div>
+							<div class="timeline__date">
+								<p class="timeline__month">Январь</p>
+								<p class="timeline__year">2015</p>
+							</div>
+							<p class="timeline__desc">Доходность более 250% на Московской бирже</p>
+						</div>
+						<div class="timeline__item timeline__item_4">
+							<div class="timeline__dot timeline__dot_4"></div>
+							<div class="timeline__date">
+								<p class="timeline__month">Январь</p>
+								<p class="timeline__year">2017</p>
+							</div>
+							<p class="timeline__desc">Годовая доходность -6.52%, уход 70% клиентов</p>
+						</div>
+						<div class="timeline__item timeline__item_5">
+							<div class="timeline__dot timeline__dot_5"></div>
+							<div class="timeline__date">
+								<p class="timeline__month">Октябрь</p>
+								<p class="timeline__year">2018</p>
+							</div>
+							<p class="timeline__desc">Старт торговли на CME и криптовалютных биржах под брендом Quant Hill</p>
+						</div>
+						<div class="timeline__item timeline__item_6">
+							<div class="timeline__dot timeline__dot_6"></div>
+							<div class="timeline__date">
+								<p class="timeline__month">Июнь</p>
+								<p class="timeline__year">2019</p>
+							</div>
+							<p class="timeline__desc">Разработка собственного ПО для исследований и торговли</p>
+						</div>
+						<div class="timeline__item timeline__item_7">
+							<div class="timeline__dot timeline__dot_7"></div>
+							<div class="timeline__date">
+								<p class="timeline__month">Январь</p>
+								<p class="timeline__year">2021</p>
+							</div>
+							<p class="timeline__desc">Капитал $100m+, доходность более 100% три года подряд</p>
+						</div>
+						<div class="timeline__item timeline__item_8">
+							<div class="timeline__dot timeline__dot_8"></div>
+							<div class="timeline__date">
+								<p class="timeline__month">Март</p>
+								<p class="timeline__year">2022</p>
+							</div>
+							<p class="timeline__desc">Убыток -8.76% за год, снижение капитала до $ 50m</p>
+						</div>
+						<div class="timeline__item timeline__item_9">
+							<div class="timeline__dot timeline__dot_9"></div>
+							<div class="timeline__date">
+								<p class="timeline__month">Февраль</p>
+								<p class="timeline__year">2023</p>
+							</div>
+							<p class="timeline__desc">Релокация бизнеса в ОАЭ и запуск хедж-фонда</p>
+						</div>
+						<div class="timeline__item timeline__item_10">
+							<div class="timeline__dot timeline__dot_10"></div>
+							<div class="timeline__date">
+								<p class="timeline__month">Декабрь</p>
+								<p class="timeline__year">2024</p>
+							</div>
+							<p class="timeline__desc">Доходность ~35% по всем стратегиям</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Trading Pros -->
+		<section class="trading-pros">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="trading-pros__header mb-lg-4 d-lg-none text-center text-sm-start">
+							<h2 class="section-title trading-pros__title mb-3">Trading Pros</h2>
+							<div class="trading-pros__text text">
+								<p>Almost a decade of non-stop learning and weathering violent financial storms has united us as an
+									experienced and proactive team.</p>
+								<p>We design and support high-quality investment solutions.
+									Our team of experts use them to identify profitable opportunities in the markets.</p>
+							</div>
+						</div>
+						<div class="trading-pros__block d-flex flex-column flex-sm-row align-items-center align-items-sm-start">
+							<div
+								class="trading-pros__left d-flex flex-column align-items-sm-end text-sm-end align-items-center text-center">
+								<div class="trading-pros__image mb-lg-5 mb-sm-4">
+									<img src="img/who/trading-pros/image.png" alt="фото">
+								</div>
+								<div class="trading-pros__desc">
+									<div class="trading-pros__tooltip_wrap position-relative">
+										<div class="trading-pros__name">
+											<p><span>Igor </span> Shepelev</p>
+										</div>
+										<div class="trading-pros__tooltip">
+											<div class="trading-pros__content position-relative">
+												<div class="trading-pros__box box">
+													<img src="img/who/trading-pros/image-1.jpg" alt="фото">
+												</div>
+												<div class="trading-pros__sub text text-start">
+													<p>Founder, algorithmic trading expert with more than 10 years of trading experience</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="trading-pros__work mt-1 mt-sm-0">
+										<p>Founder, CEO</p>
+									</div>
+								</div>
+							</div>
+							<div
+								class="trading-pros__right d-flex flex-column justify-content-sm-between align-items-sm-start align-items-center text-center text-sm-start justify-content-center">
+								<div class="trading-pros__header mb-4 d-none d-lg-block">
+									<h2 class="section-title trading-pros__title mb-3">Trading Pros</h2>
+									<div class="trading-pros__text text">
+										<p>Almost a decade of non-stop learning and weathering violent financial storms has united us as an
+											experienced and proactive team.</p>
+										<p>We design and support high-quality investment solutions.
+											Our team of experts use them to identify profitable opportunities in the markets.</p>
+									</div>
+								</div>
+								<div class="trading-pros__bottom d-flex flex-column align-items-center align-items-sm-start">
+									<div class="trading-pros__names">
+										<div class="trading-pros__tooltip_wrap position-relative">
+											<div class="trading-pros__name">
+												<p><span>Andrew </span>Ksenev</p>
+											</div>
+											<div class="trading-pros__tooltip">
+												<div class="trading-pros__content position-relative">
+													<div class="trading-pros__box box">
+														<img src="img/who/trading-pros/image-2.jpg" alt="фото">
+													</div>
+													<div class="trading-pros__sub text text-start">
+														<p>Partner, Head of Algorithmic Trading with more than 8 years of experience</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="trading-pros__tooltip_wrap position-relative">
+											<div class="trading-pros__name">
+												<p><span>Roman </span>Khokhlomin</p>
+											</div>
+											<div class="trading-pros__tooltip">
+												<div class="trading-pros__content position-relative">
+													<div class="trading-pros__box box">
+														<img src="img/who/trading-pros/image-3.jpg" alt="фото">
+													</div>
+													<div class="trading-pros__sub text text-start">
+														<p>Dev team lead, in charge of trading infrastructure, with more than 25 years of experience
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="trading-pros__tooltip_wrap position-relative">
+											<div class="trading-pros__name">
+												<p><span>Denis </span>Chubuk</p>
+											</div>
+											<div class="trading-pros__tooltip">
+												<div class="trading-pros__content position-relative">
+													<div class="trading-pros__box box">
+														<img src="img/who/trading-pros/image-4.jpg" alt="фото">
+													</div>
+													<div class="trading-pros__sub text text-start">
+														<p>Quantitative research pro, expertise since 2014</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="trading-pros__tooltip_wrap position-relative">
+											<div class="trading-pros__name">
+												<p><span>Nikita </span>Grishunin</p>
+											</div>
+											<div class="trading-pros__tooltip">
+												<div class="trading-pros__content position-relative">
+													<div class="trading-pros__box box">
+														<img src="img/who/trading-pros/image-5.jpg" alt="фото">
+													</div>
+													<div class="trading-pros__sub text text-start">
+														<p>Business development expert, Head of sales with more than 10 years of experience</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+									<button class="trading-pros__btn btn-1" data-bs-toggle="modal" data-bs-target="#modal-join-team">Join
+										team</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Our core principles -->
+		<section class="principles">
+			<div class="container">
+				<div class="row position-relative principles__header">
+					<div class="col-12">
+						<h2 class="section-title principles__title">Our core principles</h2>
+						<span class="principles__num">7</span>
+					</div>
+				</div>
+				<div class="row justify-content-lg-center g-4 gy-sm-5 gy-lg-4 principles__wrap">
+					<div class="col-lg-3 col-sm-6">
+						<div class="principles__item d-flex">
+							<span class="principles__number">1</span>
+							<div class="principles__desc d-flex flex-column">
+								<p class="principles__name">Honesty and
+									transparency</p>
+								<div class="principles__text text">
+									<p>We are radically honest with our clients and provide as much information as possible</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="principles__item d-flex">
+							<span class="principles__number">2</span>
+							<div class="principles__desc d-flex flex-column">
+								<p class="principles__name">Professionalism and
+									development</p>
+								<div class="principles__text text">
+									<p>We are constantly learning and attracting professionals to the company</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="principles__item d-flex">
+							<span class="principles__number">3</span>
+							<div class="principles__desc d-flex flex-column">
+								<p class="principles__name">Rationality and
+									objectivity</p>
+								<div class="principles__text text">
+									<p>We build our products only on the analysis of objective data</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="principles__item d-flex">
+							<span class="principles__number">4</span>
+							<div class="principles__desc d-flex flex-column">
+								<p class="principles__name">Сonsistency and
+									automation</p>
+								<div class="principles__text text">
+									<p>System will always be more efficient and stable than intuition and ideological approach</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="principles__item d-flex">
+							<span class="principles__number">5</span>
+							<div class="principles__desc d-flex flex-column">
+								<p class="principles__name"> Personal
+									approach
+								</p>
+								<div class="principles__text text">
+									<p>Each of our clients is key and receives an individual approach</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="principles__item d-flex">
+							<span class="principles__number">6</span>
+							<div class="principles__desc d-flex flex-column">
+								<p class="principles__name">Long-term
+									perspective
+								</p>
+								<div class="principles__text text">
+									<p>We use only long-term investment strategies that have proven their reliability and effectiveness
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="principles__item d-flex">
+							<span class="principles__number">7</span>
+							<div class="principles__desc d-flex flex-column">
+								<p class="principles__name">Resposibility</p>
+								<div class="principles__text text">
+									<p>We are aware of our obligations to our investors and are ready to be responsible for the
+										consequences of our actions and decisions</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Cooperation opportunities -->
+		<section class="products who-products section">
+			<div class="container">
+				<div class="row products__header">
+					<div class="col-12">
+						<h2 class="section-title text-center text-sm-start">
+							Cooperation opportunities
+						</h2>
+					</div>
+				</div>
+				<div class="row g-lg-5 g-4">
+					<div class="col-sm-6">
+						<div
+							class="products__item item d-flex flex-column justify-content-between text-center text-sm-start align-items-sm-start align-items-center">
+							<div class="products__group d-flex flex-column align-items-center align-items-sm-start">
+								<div class="item-title">
+									<p class="products__name name">
+										Become a client
+									</p>
+								</div>
+								<div class="products__text text item-text mt-lg-2 mt-sm-3 mt-2">
+									<p>Our manager will contact you to discuss investment profile and select a suitable investment
+										strategy</p>
+								</div>
+							</div>
+							<a href="#" class="products__btn item-btn btn-1 mt-3" data-bs-toggle="modal"
+								data-bs-target="#modal-become-client">Get in touch</a>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div
+							class="products__item item d-flex flex-column justify-content-between text-center text-sm-start align-items-sm-start align-items-center">
+							<div class="products__group d-flex flex-column align-items-center align-items-sm-start">
+								<div class="item-title">
+									<p class="products__name name">
+										Become a partner
+									</p>
+								</div>
+								<div class="products__text text item-text mt-lg-2 mt-sm-3 mt-2">
+									<p>We offer ample opportunities for a partner network and are always interested in expanding</p>
+								</div>
+							</div>
+							<a href="#" class="products__btn item-btn btn-1 mt-3" data-bs-toggle="modal"
+								data-bs-target="#modal-become-partner">Book a call</a>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div
+							class="products__item item d-flex flex-column justify-content-between text-center text-sm-start align-items-sm-start align-items-center">
+							<div class="products__group d-flex flex-column align-items-center align-items-sm-start">
+								<div class="item-title">
+									<p class="products__name name">
+										Become a personal client manager
+									</p>
+								</div>
+								<div class="products__text text item-text mt-lg-2 mt-sm-3 mt-2">
+									<p>
+										Become part of a professional asset management team.
+									</p>
+								</div>
+							</div>
+							<a href="#" class="products__btn item-btn btn-1 mt-3" data-bs-toggle="modal"
+								data-bs-target="#modal-join-team">Join team</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 d-flex justify-content-between align-items-center flex-column flex-sm-row flex-wrap">
+						<div class="footer-top__left">
+							<a href="#" class="footer-top__logo">
+								<img src="img/footer/logo.svg" alt="logo quanthill">
+							</a>
+						</div>
+						<ul class="nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#">О нас</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Почему мы</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Документы</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Карьера</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Вопрос-ответ</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Стратегии</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Правовая информация</a>
+							</li>
+						</ul>
+						<div class="footer-top__right d-flex align-items-center">
+							<div class="footer-top__group d-flex align-items-start">
+								<a href="tel:88006003887" class="footer-top__phone">8 (800) 600-38-87</a>
+								<a href="mailto:mail@quanthill.ae" class="footer-top__mail">mail@quanthill.ae</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row footer-bottom">
+					<div class="col-12 d-flex justify-content-between align-items-center flex-column flex-lg-row">
+						<p class="footer-bottom__copyright">© 2014 - 2025 Quanthill - FZE. Все права защищены</p>
+						<div class="footer-bottom__links d-flex align-items-center flex-column flex-lg-row">
+							<a target="_blank" href="#">Положение об обработке персональных данных</a>
+							<a target="_blank" href="#">Пользовательское соглашение</a>
+							<a target="_blank" href="#">Согласие на обработку данных метрическими программами</a>
+						</div>
+						<div class="footer-bottom__right d-flex align-items-center">
+							<p class="footer-bottom__legal d-lg-none">Telegram</p>
+							<a href="https://t.me/quanthillpublic" target="_blank" rel="nofollow" class="footer-bottom__social">
+								<img src="img/header/tg.svg" alt="telegram">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+		crossorigin="anonymous"></script>
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/three.min.js"></script>
+	<script src="js/vanta.net.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/select2.min.js"></script>
+	<script src="js/phone-masks.js"></script>
+	<script src="js/mask.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

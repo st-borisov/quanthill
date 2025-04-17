@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<main>
+
+		<div class="d-flex flex-column align-items-start">
+			<a href="#" class="products__btn item-btn btn-1 mt-3" data-bs-toggle="modal"
+				data-bs-target="#modal-request">Request
+				info</a>
+			<a href="#" class="products__btn item-btn btn-1 mt-3" data-bs-toggle="modal"
+				data-bs-target="#modal-join-team">Join
+				team</a>
+			<a href="#" class="products__btn item-btn btn-1 mt-3" data-bs-toggle="modal"
+				data-bs-target="#modal-become-client">Get in touch</a>
+			<a href="#" class="products__btn item-btn btn-1 mt-3" data-bs-toggle="modal"
+				data-bs-target="#modal-become-partner">Book a call</a>
+			<button class="btn-1 products__btn item-btn mt-3" data-bs-toggle="modal" data-bs-target="#modal-book-a-call">Book
+				a
+				call 2</button>
+		</div>
+
+		<!-- Модальное окно (request) -->
+		<div class="modal fade" id="modal-request" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body">
+						<p class="modal__title mb-lg-4">Request access</p>
+						<div class="modal__form">
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby="" placeholder="Full name">
+							</div>
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby=""
+									placeholder="Name of Company or Individual Represented" name="company">
+							</div>
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby=""
+									placeholder="City / Country" name="city">
+							</div>
+							<div class="mb-lg-4">
+								<input type="email" class="form-control modal__input" id="" aria-describedby="" placeholder="Email"
+									name="email">
+							</div>
+							<div class="mb-lg-4">
+								<div class="phone-input">
+									<select class="phone-input__country"></select>
+									<div class="phone-input__phone">
+										<input class="phone-input__phone-placeholder" placeholder="123" />
+										<input class="phone-input__phone-number" />
+									</div>
+								</div>
+							</div>
+							<button class="btn-1 modal__send">Send</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Модальное окно (Join team) -->
+		<div class="modal fade" id="modal-join-team" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body">
+						<p class="modal__title mb-lg-4">Join team</p>
+						<div class="modal__form">
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby="" placeholder="Full name">
+							</div>
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby=""
+									placeholder="Name of Company or Individual Represented" name="company">
+							</div>
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby=""
+									placeholder="City / Country" name="city">
+							</div>
+							<div class="mb-lg-4">
+								<input type="email" class="form-control modal__input" id="" aria-describedby="" placeholder="Email"
+									name="email">
+							</div>
+							<div class="mb-lg-4">
+								<div class="phone-input">
+									<select class="phone-input__country"></select>
+									<div class="phone-input__phone">
+										<input class="phone-input__phone-placeholder" placeholder="123" />
+										<input class="phone-input__phone-number" />
+									</div>
+								</div>
+							</div>
+							<div class="mb-lg-4 d-flex flex-column align-items-start">
+								<label for="" class="modal__label">CV</label>
+								<div class="upload-file__wrapper">
+									<input type="file" name="files[]" id="upload-file__input_1" class="upload-file__input"
+										accept=".jpg, .jpeg, .png, .gif, .bmp, .doc, .docx, .xls, .xlsx, .txt, .tar, .zip, .7z, .7zip"
+										multiple>
+									<label class="upload-file__label" for="upload-file__input_1">
+										<span class="upload-file__text text-truncate">Загрузить файл</span>
+									</label>
+								</div>
+							</div>
+							<button class="btn-1 modal__send">Send</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Модальное окно (Become a client) -->
+		<div class="modal fade" id="modal-become-client" tabindex="-1" aria-labelledby="exampleModalLabel"
+			aria-hidden="true">
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body">
+						<p class="modal__title mb-lg-4">Become a client</p>
+						<div class="modal__form">
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby="" placeholder="Full name">
+							</div>
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby=""
+									placeholder="Name of Company or Individual Represented" name="company">
+							</div>
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby=""
+									placeholder="City / Country" name="city">
+							</div>
+							<div class="mb-lg-4">
+								<input type="email" class="form-control modal__input" id="" aria-describedby="" placeholder="Email"
+									name="email">
+							</div>
+							<div class="mb-lg-4">
+								<div class="phone-input">
+									<select class="phone-input__country"></select>
+									<div class="phone-input__phone">
+										<input class="phone-input__phone-placeholder" placeholder="123" />
+										<input class="phone-input__phone-number" />
+									</div>
+								</div>
+							</div>
+							<button class="btn-1 modal__send">Send</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Модальное окно (Become a partner) -->
+		<div class="modal fade" id="modal-become-partner" tabindex="-1" aria-labelledby="exampleModalLabel"
+			aria-hidden="true">
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body">
+						<p class="modal__title mb-lg-4">Become a partner</p>
+						<div class="modal__form">
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby="" placeholder="Full name">
+							</div>
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby=""
+									placeholder="Name of Company or Individual Represented" name="company">
+							</div>
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby=""
+									placeholder="City / Country" name="city">
+							</div>
+							<div class="mb-lg-4">
+								<input type="email" class="form-control modal__input" id="" aria-describedby="" placeholder="Email"
+									name="email">
+							</div>
+							<div class="mb-lg-4">
+								<div class="phone-input">
+									<select class="phone-input__country"></select>
+									<div class="phone-input__phone">
+										<input class="phone-input__phone-placeholder" placeholder="123" />
+										<input class="phone-input__phone-number" />
+									</div>
+								</div>
+							</div>
+							<button class="btn-1 modal__send">Send</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Модальное окно (Book a call) -->
+		<div class="modal fade" id="modal-book-a-call" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body">
+						<p class="modal__title mb-lg-4">Book a call</p>
+						<div class="modal__form">
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby="" placeholder="Full name">
+							</div>
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby=""
+									placeholder="Name of Company or Individual Represented" name="company">
+							</div>
+							<div class="mb-lg-4">
+								<input type="text" class="form-control modal__input" id="" aria-describedby=""
+									placeholder="City / Country" name="city">
+							</div>
+							<div class="mb-lg-4">
+								<input type="email" class="form-control modal__input" id="" aria-describedby="" placeholder="Email"
+									name="email">
+							</div>
+							<div class="mb-lg-4">
+								<div class="phone-input">
+									<select class="phone-input__country"></select>
+									<div class="phone-input__phone">
+										<input class="phone-input__phone-placeholder" placeholder="123" />
+										<input class="phone-input__phone-number" />
+									</div>
+								</div>
+							</div>
+							<button class="btn-1 modal__send">Send</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+		crossorigin="anonymous"></script>
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/three.min.js"></script>
+	<script src="js/vanta.net.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/select2.min.js"></script>
+	<script src="js/phone-masks.js"></script>
+	<script src="js/mask.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
